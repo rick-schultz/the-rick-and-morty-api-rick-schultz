@@ -88,6 +88,15 @@ export default {
     padding-left: 0.8rem;
   }
 
+  @media screen and (max-width: 595px) {
+      #searchBar{
+    width: 12rem;
+    margin: 2rem;
+    height: 2rem;
+    padding-left: 0.8rem;
+  }
+  }
+
   button {
     background: rgb(60, 62, 68);
     padding-left:1rem;
