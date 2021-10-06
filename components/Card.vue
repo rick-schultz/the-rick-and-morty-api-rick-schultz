@@ -63,7 +63,7 @@ props: ['name', 'image', 'status', 'url', 'location', 'episode', 'episodename', 
 
   @media screen and (max-width: 595px) {
   .cardWrapper {
-  width: 380px;
+  width: 375px;
   height: 270px;
   display: flex;
   overflow: hidden;
