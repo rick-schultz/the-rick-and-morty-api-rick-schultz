@@ -1,6 +1,7 @@
 <template>
   <div id="mainPage">
     <input id="searchBar" v-model="input" type="text" placeholder="Search for a character"/>
+    <button @click="clearValue()">Clear</button>
     <div id="containerWrapper">
       <div v-for="(character) in $store.state.characters" :key="character.id">
         <Card
@@ -9,7 +10,7 @@
         :image="character.image"
         :status="character.status"
         :location="character.location"
-        :episode="character.episode"
+        :episode="character.episode[0]"
         :episodename="character.firstEpisodeName"
         :species="character.species"
         />
@@ -48,7 +49,11 @@ export default {
     },
       methods: {
         ...mapActions(['getCharacters']),
+        clearValue() {
+        this.debouncedInput = ''
+        this.getCharacters('');
       },
+   },
   }
 </script>
 
@@ -81,6 +86,20 @@ export default {
     margin: 2rem;
     height: 2rem;
     padding-left: 0.8rem;
+  }
+
+  button {
+    background: rgb(60, 62, 68);
+    padding-left:1rem;
+    padding-right:1rem;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    border-radius: 0.4rem;
+  }
+
+  button:hover {
+    transition: filter 0.3s;
+    filter: brightness(0.9);
   }
 
 </style>

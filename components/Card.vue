@@ -2,7 +2,7 @@
   <article class="cardWrapper">
     <div class="imgWrapper">
       <img :src="image"
-      alt="Shleemypants" />
+      alt="Character Image" />
     </div>
     <div class="contentWrapper">
       <div class="section">
@@ -42,8 +42,40 @@
 
 <script>
 export default {
-// eslint-disable-next-line vue/require-prop-types
-props: ['name', 'image', 'status', 'url', 'location', 'episode', 'episodename', 'species'],
+props: {
+  'name': {
+    type: String,
+    default: ''
+    },
+  'image': {
+    type: String,
+    default: ''
+    },
+  'status': {
+    type: String,
+    default: ''
+    },
+  'url': {
+    type: String,
+    default: ''
+    },
+  'location': {
+    type: Object,
+    default() {}
+    },
+  'episode': {
+    type: String,
+    default: ''
+    },
+  'episodename': {
+    type: String,
+    default: ''
+    },
+  'species': {
+    type: String,
+    default: ''
+    },
+  }
 }
 </script>
 
@@ -59,6 +91,7 @@ props: ['name', 'image', 'status', 'url', 'location', 'episode', 'episodename', 
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
   rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   line-height: 2;
+  transition: 0.3s
   }
 
   @media screen and (max-width: 595px) {
@@ -73,7 +106,12 @@ props: ['name', 'image', 'status', 'url', 'location', 'episode', 'episodename', 
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
   rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   line-height: 2;
+  transition: 0.3s
   }
+  }
+
+  .cardWrapper:hover {
+  background: rgb(48, 49, 54) none repeat scroll 0% 0%;
   }
 
   .imgWrapper {
