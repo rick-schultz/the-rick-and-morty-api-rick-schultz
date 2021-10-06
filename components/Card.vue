@@ -61,6 +61,21 @@ props: ['name', 'image', 'status', 'url', 'location', 'episode', 'episodename', 
   line-height: 2;
   }
 
+  @media screen and (max-width: 595px) {
+  .cardWrapper {
+  width: 390px;
+  height: 270px;
+  display: flex;
+  overflow: hidden;
+  background: rgb(60, 62, 68) none repeat scroll 0% 0%;
+  border-radius: 0.5rem;
+  margin: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+  rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  line-height: 2;
+  }
+  }
+
   .imgWrapper {
   flex: 2 1 0%;
   width: 100%;
