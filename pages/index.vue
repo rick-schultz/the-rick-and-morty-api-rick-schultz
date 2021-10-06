@@ -24,7 +24,7 @@
 
 <script>
   import { mapActions } from 'vuex';
-export default {
+  export default {
     data: () => ({
      debouncedInput: '',
      timeout: null,
